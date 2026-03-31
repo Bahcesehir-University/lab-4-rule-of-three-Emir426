@@ -212,7 +212,11 @@ public:
 
         //    2. Check for self-assignment (if this == &other)
 
-        if (this != &other) {
+        if (this == &other) 
+
+        {return *this;
+
+        }
 
             //    3. Delete old m_data (delete[])
 
@@ -229,8 +233,6 @@ public:
             //    6. Copy string data using strcpy()
 
             strcpy(m_data, other.m_data);
-
-        }
 
         //    7. Return *this
 
